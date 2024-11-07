@@ -42,23 +42,34 @@ int main() {
       T[i*n2+n+1] = Tnew[i*n2+n+1] = i * top / (n+1);
    }
 
-   while(var > tol && iter <= maxIter) {
-      ++iter;
-      var = 0.0;
+#pragma omp parallel
+   {
+       while (var > tol && iter <= maxIter) {
+#pragma omp barrier
+#pragma omp single 
+           {
+               ++iter;
+               var = 0.0;
+           }
+#pragma omp for private(j) reduction(max:var)
+           for (i = 1; i <= n; ++i)
+               for (j = 1; j <= n; ++j) {
+                   Tnew[i * n2 + j] = 0.25 * (T[(i - 1) * n2 + j] + T[(i + 1) * n2 + j]
+                       + T[i * n2 + (j - 1)] + T[i * n2 + (j + 1)]);
 
-#pragma omp parallel for private(j)
-      for (i=1; i<=n; ++i) {
-         for (j=1; j<=n; ++j) {         
-            Tnew[i*n2+j] = 0.25*( T[(i-1)*n2+j] + T[(i+1)*n2+j] 
-                                + T[i*n2+(j-1)] + T[i*n2+(j+1)] );
-                  var = MAX(var, fabs(Tnew[i*n2+j] - T[i*n2+j]));
-         }
-      }
-    
-   Tmp=T; T=Tnew; Tnew=Tmp;
+                   var = MAX(var, fabs(Tnew[i * n2 + j] - T[i * n2 + j]));
+               }
 
-      if (iter%100 == 0)
-         printf("iter: %8u, variation = %12.4lE\n", iter, var);
+#pragma omp single nowait
+           {
+               Tmp = T; T = Tnew; Tnew = Tmp;
+
+               if (iter % 100 == 0)
+                   printf("iter: %8u, variation = %12.4lE\n", iter, var);
+
+           }
+
+       }
    }
 
    double endTime = (clock() - startTime) / (double) CLOCKS_PER_SEC;
