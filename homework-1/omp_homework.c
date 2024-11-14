@@ -17,8 +17,11 @@ int printResults(double *xr, double *xi, int N);
 
 int main(int argc, char *argv[])
 {
+  // Timestamps to measure performance 
+  double dft_finish, idft_finish;
+
   // size of input array
-  int N = 10000;
+  int N = 75000;
   printf("DFTW calculation with N = %d \n", N);
 
   double *xr = (double *)malloc(N * sizeof(double));
@@ -39,16 +42,22 @@ int main(int argc, char *argv[])
   // DFT
   int idft = 1;
   DFT(idft, xr, xi, Xr_o, Xi_o, N);
+  dft_finish = omp_get_wtime();
   // IDFT
   idft = -1;
   DFT(idft, Xr_o, Xi_o, xr_check, xi_check, N);
+  idft_finish = omp_get_wtime();
 
   // stop timer
+  /*
   double run_time = omp_get_wtime() - start_time;
   printf("DFTW computation in %f seconds\n", run_time);
+  */
+  printf("DFT: %f, IDFT: %f, TOTAL: %f\n", dft_finish - start_time, idft_finish - dft_finish, idft_finish - start_time);
 
   // check the results: easy to make correctness errors with openMP
   checkResults(xr, xi, xr_check, xi_check, Xr_o, Xi_o, N);
+
 // print the results of the DFT
 #ifdef DEBUG
   printResults(Xr_o, Xi_o, N);
@@ -105,11 +114,11 @@ int fillInput(double *xr, double *xi, int N)
   for (n = 0; n < N; n++)
   {
     // Generate random discrete-time signal x in range (-1,+1)
-    // xr[n] = ((double)(2.0 * rand()) / RAND_MAX) - 1.0;
-    // xi[n] = ((double)(2.0 * rand()) / RAND_MAX) - 1.0;
+    xr[n] = ((double)(2.0 * rand()) / RAND_MAX) - 1.0;
+    xi[n] = ((double)(2.0 * rand()) / RAND_MAX) - 1.0;
     // constant real signal
-    xr[n] = 1.0;
-    xi[n] = 0.0;
+    // xr[n] = 1.0;
+    // xi[n] = 0.0;
   }
   return 1;
 }
@@ -133,9 +142,9 @@ int checkResults(double *xr, double *xi, double *xr_check, double *xi_check, dou
   for (n = 0; n < N; n++)
   {
     if (fabs(xr[n] - xr_check[n]) > R_ERROR)
-      printf("ERROR - x[%d] = %f, inv(X)[%d]=%f \n", n, xr[n], n, xr_check[n]);
+      printf("ERROR - xr[%d] = %f, inv(X)r[%d]=%f \n", n, xr[n], n, xr_check[n]);
     if (fabs(xi[n] - xi_check[n]) > R_ERROR)
-      printf("ERROR - x[%d] = %f, inv(X)[%d]=%f \n", n, xi[n], n, xi_check[n]);
+      printf("ERROR - xi[%d] = %f, inv(X)i[%d]=%f \n", n, xi[n], n, xi_check[n]);
   }
   printf("Xre[0] = %f \n", Xr_o[0]);
   return 1;
