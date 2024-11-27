@@ -1,0 +1,738 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.10.0 Build 20230609_000000
+
+Compiler options: -o3 -xHost -qopenmp -qopt-report5 -o h1
+
+    Report from: Interprocedural optimizations [ipo]
+
+  WHOLE PROGRAM (SAFE) [EITHER METHOD]: false
+  WHOLE PROGRAM (SEEN) [TABLE METHOD]: false
+  WHOLE PROGRAM (READ) [OBJECT READER METHOD]: false
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+In the inlining report below:
+   "sz" refers to the "size" of the routine. The smaller a routine's size,
+      the more likely it is to be inlined.
+   "isz" refers to the "inlined size" of the routine. This is the amount
+      the calling routine will grow if the called routine is inlined into it.
+      The compiler generally limits the amount a routine can grow by having
+      routines inlined into it.
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1/6=16.7%] omp_homework.c(19,1)
+  -> EXTERN: (25,3) printf(const char *__restrict__, ...)
+  -> EXTERN: (27,26) malloc(size_t)
+  -> EXTERN: (28,26) malloc(size_t)
+  -> INLINE: (29,3) fillInput(double *, double *, int) (isz = 52) (sz = 63)
+    -> EXTERN: (111,3) srand(unsigned int)
+    -> EXTERN: (111,9) time(time_t *)
+    -> EXTERN: (113,5) rand(void)
+    -> EXTERN: (117,29) rand(void)
+    -> EXTERN: (118,29) rand(void)
+  -> EXTERN: (31,32) malloc(size_t)
+  -> EXTERN: (32,32) malloc(size_t)
+  -> INLINE: (33,3) setOutputZero(double *, double *, int) (isz = 17) (sz = 28)
+  -> EXTERN: (35,28) malloc(size_t)
+  -> EXTERN: (36,28) malloc(size_t)
+  -> INLINE: (37,3) setOutputZero(double *, double *, int) (isz = 17) (sz = 28)
+  -> EXTERN: (40,23) omp_get_wtime(void)
+  -> INLINE: (44,3) DFT(int, double *, double *, double *, double *, int) (isz = 123) (sz = 140)
+    -> EXTERN: (87,26) cos(double)
+    -> EXTERN: (87,64) sin(double)
+    -> EXTERN: (89,34) sin(double)
+    -> EXTERN: (89,65) cos(double)
+  -> EXTERN: (45,16) omp_get_wtime(void)
+  -> INLINE: (48,3) DFT(int, double *, double *, double *, double *, int) (isz = 123) (sz = 140)
+    -> EXTERN: (87,26) cos(double)
+    -> EXTERN: (87,64) sin(double)
+    -> EXTERN: (89,34) sin(double)
+    -> EXTERN: (89,65) cos(double)
+  -> EXTERN: (49,17) omp_get_wtime(void)
+  -> EXTERN: (56,3) printf(const char *__restrict__, ...)
+  -> INLINE: (59,3) checkResults(double *, double *, double *, double *, double *, double *, int) (isz = 61) (sz = 80)
+    -> EXTERN: (145,7) printf(const char *__restrict__, ...)
+    -> EXTERN: (147,7) printf(const char *__restrict__, ...)
+    -> EXTERN: (149,3) printf(const char *__restrict__, ...)
+  -> EXTERN: (67,3) free(void *)
+  -> EXTERN: (68,3) free(void *)
+  -> EXTERN: (69,3) free(void *)
+  -> EXTERN: (70,3) free(void *)
+  -> EXTERN: (71,3) free(void *)
+  -> EXTERN: (72,3) free(void *)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at omp_homework.c(112,3) inlined into omp_homework.c(29,3)
+   remark #15527: loop was not vectorized: function call to rand(void) cannot be vectorized   [ omp_homework.c(113,5) ]
+LOOP END
+
+LOOP BEGIN at omp_homework.c(114,3) inlined into omp_homework.c(29,3)
+   remark #15382: vectorization support: call to function rand(void) cannot be vectorized   [ omp_homework.c(117,29) ]
+   remark #15382: vectorization support: call to function rand(void) cannot be vectorized   [ omp_homework.c(118,29) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:rand(void) (117:29) and call:rand(void) (118:29)
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:rand(void) (118:29) and call:rand(void) (117:29)
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(33,3)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(33,3)
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(132,5) ]
+   remark #15388: vectorization support: reference Xi_o[n] has aligned access   [ omp_homework.c(133,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.406
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 3.490 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=4687
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(33,3)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(132,5) ]
+   remark #15389: vectorization support: reference Xi_o[n] has unaligned access   [ omp_homework.c(133,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.600
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 3.490 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(33,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(37,3)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(37,3)
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(132,5) ]
+   remark #15388: vectorization support: reference Xi_o[n] has aligned access   [ omp_homework.c(133,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.406
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 3.490 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=4687
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(37,3)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(132,5) ]
+   remark #15389: vectorization support: reference Xi_o[n] has unaligned access   [ omp_homework.c(133,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.600
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 3.490 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3) inlined into omp_homework.c(37,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at omp_homework.c(84,5) inlined into omp_homework.c(44,3)
+   remark #25444: Loopnest Interchanged: ( 1 2 ) --> ( 2 1 )
+   remark #15542: loop was not vectorized: inner loop was already vectorized   [ omp_homework.c(84,5) ]
+
+   LOOP BEGIN at omp_homework.c(82,3) inlined into omp_homework.c(44,3)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at omp_homework.c(82,3) inlined into omp_homework.c(44,3)
+      remark #25427: Loop Statements Reordered
+      remark #15389: vectorization support: reference Xi_o[k] has unaligned access   [ omp_homework.c(89,7) ]
+      remark #15389: vectorization support: reference Xi_o[k] has unaligned access   [ omp_homework.c(89,7) ]
+      remark #15388: vectorization support: reference Xr_o[k] has aligned access   [ omp_homework.c(87,7) ]
+      remark #15388: vectorization support: reference Xr_o[k] has aligned access   [ omp_homework.c(87,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.104
+      remark #15301: PERMUTED LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 555 
+      remark #15477: vector cost: 62.500 
+      remark #15478: estimated potential speedup: 8.870 
+      remark #15482: vectorized math library calls: 2 
+      remark #15486: divides: 2 
+      remark #15487: type converts: 2 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=18750
+   LOOP END
+
+   LOOP BEGIN at omp_homework.c(82,3) inlined into omp_homework.c(44,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at omp_homework.c(84,5) inlined into omp_homework.c(48,3)
+   remark #25444: Loopnest Interchanged: ( 1 2 ) --> ( 2 1 )
+   remark #15542: loop was not vectorized: inner loop was already vectorized   [ omp_homework.c(84,5) ]
+
+   LOOP BEGIN at omp_homework.c(82,3) inlined into omp_homework.c(48,3)
+   <Peeled loop for vectorization>
+      remark #25015: Estimate of max trip count of loop=3
+   LOOP END
+
+   LOOP BEGIN at omp_homework.c(82,3) inlined into omp_homework.c(48,3)
+      remark #25427: Loop Statements Reordered
+      remark #15389: vectorization support: reference Xi_o[k] has unaligned access   [ omp_homework.c(89,7) ]
+      remark #15389: vectorization support: reference Xi_o[k] has unaligned access   [ omp_homework.c(89,7) ]
+      remark #15388: vectorization support: reference Xr_o[k] has aligned access   [ omp_homework.c(87,7) ]
+      remark #15388: vectorization support: reference Xr_o[k] has aligned access   [ omp_homework.c(87,7) ]
+      remark #15381: vectorization support: unaligned access used inside loop body
+      remark #15305: vectorization support: vector length 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.104
+      remark #15301: PERMUTED LOOP WAS VECTORIZED
+      remark #15442: entire loop may be executed in remainder
+      remark #15448: unmasked aligned unit stride loads: 1 
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15450: unmasked unaligned unit stride loads: 1 
+      remark #15451: unmasked unaligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 555 
+      remark #15477: vector cost: 62.500 
+      remark #15478: estimated potential speedup: 8.870 
+      remark #15482: vectorized math library calls: 2 
+      remark #15486: divides: 2 
+      remark #15487: type converts: 2 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=18750
+   LOOP END
+
+   LOOP BEGIN at omp_homework.c(82,3) inlined into omp_homework.c(48,3)
+   <Remainder loop for vectorization>
+   LOOP END
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5) inlined into omp_homework.c(48,3)
+<Peeled loop for vectorization>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5) inlined into omp_homework.c(48,3)
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15388: vectorization support: reference Xi_o[n] has aligned access   [ omp_homework.c(99,7) ]
+   remark #15388: vectorization support: reference Xi_o[n] has aligned access   [ omp_homework.c(99,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.055
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 61 
+   remark #15477: vector cost: 18.250 
+   remark #15478: estimated potential speedup: 3.340 
+   remark #15486: divides: 2 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=4687
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5) inlined into omp_homework.c(48,3)
+<Remainder loop for vectorization>
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15389: vectorization support: reference Xi_o[n] has unaligned access   [ omp_homework.c(99,7) ]
+   remark #15389: vectorization support: reference Xi_o[n] has unaligned access   [ omp_homework.c(99,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.289
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 61 
+   remark #15477: vector cost: 18.250 
+   remark #15478: estimated potential speedup: 3.340 
+   remark #15486: divides: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5) inlined into omp_homework.c(48,3)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at omp_homework.c(142,3) inlined into omp_homework.c(59,3)
+   remark #15382: vectorization support: call to function printf(const char *__restrict__, ...) cannot be vectorized   [ omp_homework.c(145,7) ]
+   remark #15382: vectorization support: call to function printf(const char *__restrict__, ...) cannot be vectorized   [ omp_homework.c(147,7) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+omp_homework.c(19,1):remark #34051: REGISTER ALLOCATION : [main] omp_homework.c:19
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     449
+            Global    :     135
+            Local     :     314
+        Regenerable   :      47
+        Spilled       :      29
+        
+    Routine stack
+        Variables     :       4 bytes*
+            Reads     :       2 [0.00e+00 ~ 0.0%]
+            Writes    :       2 [0.00e+00 ~ 0.0%]
+        Spills        :     192 bytes*
+            Reads     :      60 [3.18e-04 ~ 0.0%]
+            Writes    :      43 [2.22e-04 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: DFT(int, double *, double *, double *, double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (DFT(int, double *, double *, double *, double *, int)) [2/6=33.3%] omp_homework.c(80,1)
+  -> EXTERN: (87,26) cos(double)
+  -> EXTERN: (87,64) sin(double)
+  -> EXTERN: (89,34) sin(double)
+  -> EXTERN: (89,65) cos(double)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at omp_homework.c(82,3)
+   remark #25445: Loop Interchange not done due to: Data Dependencies
+   remark #25446: Dependencies found between following statements:  [From_Line# -> (Dependency Type) To_Line#]
+   remark #25447: Dependence found between following statements:  [87 -> (Output) 89]
+   remark #25447: Dependence found between following statements:  [87 -> (Flow) 89]
+   remark #25447: Dependence found between following statements:  [87 -> (Anti) 89]
+   remark #25447: Dependence found between following statements:  [87 -> (Flow) 87]
+   remark #25447: Dependence found between following statements:  [87 -> (Anti) 87]
+   remark #25447: Dependence found between following statements:  [89 -> (Flow) 89]
+   remark #25447: Dependence found between following statements:  [89 -> (Anti) 89]
+   remark #25447: Dependence found between following statements:  [89 -> (Output) 87]
+   remark #25447: Dependence found between following statements:  [89 -> (Anti) 87]
+   remark #25447: Dependence found between following statements:  [89 -> (Flow) 87]
+   remark #25451: Advice: Loop Interchange, if possible, might help loopnest. Suggested Permutation : ( 1 2 ) --> ( 2 1 ) 
+   remark #15541: outer loop was not auto-vectorized: consider using SIMD directive
+
+   LOOP BEGIN at omp_homework.c(84,5)
+      remark #15344: loop was not vectorized: vector dependence prevents vectorization
+      remark #15346: vector dependence: assumed OUTPUT dependence between Xr_o[k] (87:7) and Xi_o[k] (89:7)
+      remark #15346: vector dependence: assumed OUTPUT dependence between Xi_o[k] (89:7) and Xr_o[k] (87:7)
+   LOOP END
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5)
+<Peeled loop for vectorization, Multiversioned v1>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5)
+<Multiversioned v1>
+   remark #25228: Loop multiversioned for Data Dependence
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15388: vectorization support: reference Xi_o[n] has aligned access   [ omp_homework.c(99,7) ]
+   remark #15388: vectorization support: reference Xi_o[n] has aligned access   [ omp_homework.c(99,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.062
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15450: unmasked unaligned unit stride loads: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 63 
+   remark #15477: vector cost: 18.250 
+   remark #15478: estimated potential speedup: 3.130 
+   remark #15486: divides: 2 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5)
+<Remainder loop for vectorization, Multiversioned v1>
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(98,7) ]
+   remark #15389: vectorization support: reference Xi_o[n] has unaligned access   [ omp_homework.c(99,7) ]
+   remark #15389: vectorization support: reference Xi_o[n] has unaligned access   [ omp_homework.c(99,7) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.316
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5)
+<Remainder loop for vectorization, Multiversioned v1>
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5)
+<Multiversioned v2>
+   remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at omp_homework.c(96,5)
+<Remainder, Multiversioned v2>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+omp_homework.c(80,1):remark #34051: REGISTER ALLOCATION : [DFT] omp_homework.c:80
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   30[ rax rdx rcx rbx rsi rdi r8-r15 zmm0-zmm15]
+        
+    Routine temporaries
+        Total         :     125
+            Global    :      46
+            Local     :      79
+        Regenerable   :       4
+        Spilled       :      14
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :     112 bytes*
+            Reads     :      18 [2.98e+01 ~ 29.8%]
+            Writes    :      14 [1.89e+00 ~ 1.9%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: fillInput(double *, double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (fillInput(double *, double *, int)) [3/6=50.0%] omp_homework.c(109,1)
+  -> EXTERN: (111,3) srand(unsigned int)
+  -> EXTERN: (111,9) time(time_t *)
+  -> EXTERN: (113,5) rand(void)
+  -> EXTERN: (117,29) rand(void)
+  -> EXTERN: (118,29) rand(void)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at omp_homework.c(112,3)
+   remark #15527: loop was not vectorized: function call to rand(void) cannot be vectorized   [ omp_homework.c(113,5) ]
+LOOP END
+
+LOOP BEGIN at omp_homework.c(114,3)
+   remark #15382: vectorization support: call to function rand(void) cannot be vectorized   [ omp_homework.c(117,29) ]
+   remark #15382: vectorization support: call to function rand(void) cannot be vectorized   [ omp_homework.c(118,29) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:rand(void) (117:29) and call:rand(void) (118:29)
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:rand(void) (118:29) and call:rand(void) (117:29)
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+omp_homework.c(109,1):remark #34051: REGISTER ALLOCATION : [fillInput] omp_homework.c:109
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   12[ rax rdx rbx rbp rsi rdi r14-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :      35
+            Global    :      19
+            Local     :      16
+        Regenerable   :       4
+        Spilled       :       4
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: setOutputZero(double *, double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (setOutputZero(double *, double *, int)) [4/6=66.7%] omp_homework.c(128,1)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at omp_homework.c(130,3)
+<Peeled loop for vectorization, Multiversioned v1>
+   remark #25015: Estimate of max trip count of loop=3
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3)
+<Multiversioned v1>
+   remark #25228: Loop multiversioned for Data Dependence
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(132,5) ]
+   remark #15388: vectorization support: reference Xi_o[n] has aligned access   [ omp_homework.c(133,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15309: vectorization support: normalized vectorization overhead 0.406
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15451: unmasked unaligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 2.000 
+   remark #15478: estimated potential speedup: 3.120 
+   remark #15488: --- end vector cost summary ---
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3)
+<Remainder loop for vectorization, Multiversioned v1>
+   remark #15389: vectorization support: reference Xr_o[n] has unaligned access   [ omp_homework.c(132,5) ]
+   remark #15389: vectorization support: reference Xi_o[n] has unaligned access   [ omp_homework.c(133,5) ]
+   remark #15381: vectorization support: unaligned access used inside loop body
+   remark #15305: vectorization support: vector length 4
+   remark #15309: vectorization support: normalized vectorization overhead 1.600
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+   remark #15442: entire loop may be executed in remainder
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3)
+<Remainder loop for vectorization, Multiversioned v1>
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3)
+<Multiversioned v2>
+   remark #15304: loop was not vectorized: non-vectorizable loop instance from multiversioning
+   remark #25439: unrolled with remainder by 2  
+LOOP END
+
+LOOP BEGIN at omp_homework.c(130,3)
+<Remainder, Multiversioned v2>
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+omp_homework.c(128,1):remark #34051: REGISTER ALLOCATION : [setOutputZero] omp_homework.c:128
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   10[ rax rdx rcx rsi rdi r8-r11 zmm0]
+        
+    Routine temporaries
+        Total         :      53
+            Global    :      36
+            Local     :      17
+        Regenerable   :       7
+        Spilled       :       0
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: checkResults(double *, double *, double *, double *, double *, double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (checkResults(double *, double *, double *, double *, double *, double *, int)) [5/6=83.3%] omp_homework.c(140,1)
+  -> EXTERN: (145,7) printf(const char *__restrict__, ...)
+  -> EXTERN: (147,7) printf(const char *__restrict__, ...)
+  -> EXTERN: (149,3) printf(const char *__restrict__, ...)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at omp_homework.c(142,3)
+   remark #15382: vectorization support: call to function printf(const char *__restrict__, ...) cannot be vectorized   [ omp_homework.c(145,7) ]
+   remark #15382: vectorization support: call to function printf(const char *__restrict__, ...) cannot be vectorized   [ omp_homework.c(147,7) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+omp_homework.c(140,1):remark #34051: REGISTER ALLOCATION : [checkResults] omp_homework.c:140
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   17[ rax rdx rcx rbx rbp rsi rdi r8-r9 r12-r15 zmm0-zmm3]
+        
+    Routine temporaries
+        Total         :      52
+            Global    :      14
+            Local     :      38
+        Regenerable   :      12
+        Spilled       :       7
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :      56 bytes*
+            Reads     :       7 [4.54e+00 ~ 4.5%]
+            Writes    :       7 [4.54e+00 ~ 4.5%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
+
+Begin optimization report for: printResults(double *, double *, int)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (printResults(double *, double *, int)) [6/6=100.0%] omp_homework.c(155,1)
+  -> EXTERN: (158,5) printf(const char *__restrict__, ...)
+
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at omp_homework.c(157,3)
+   remark #15382: vectorization support: call to function printf(const char *__restrict__, ...) cannot be vectorized   [ omp_homework.c(158,5) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization
+LOOP END
+
+    Report from: Code generation optimizations [cg]
+
+omp_homework.c(155,1):remark #34051: REGISTER ALLOCATION : [printResults] omp_homework.c:155
+
+    Hardware registers
+        Reserved     :    2[ rsp rip]
+        Available    :   39[ rax rdx rcx rbx rbp rsi rdi r8-r15 mm0-mm7 zmm0-zmm15]
+        Callee-save  :    6[ rbx rbp r12-r15]
+        Assigned     :   12[ rax rdx rcx rbx rsi rdi r12-r15 zmm0-zmm1]
+        
+    Routine temporaries
+        Total         :      24
+            Global    :      12
+            Local     :      12
+        Regenerable   :       4
+        Spilled       :       5
+        
+    Routine stack
+        Variables     :       0 bytes*
+            Reads     :       0 [0.00e+00 ~ 0.0%]
+            Writes    :       0 [0.00e+00 ~ 0.0%]
+        Spills        :      40 bytes*
+            Reads     :       5 [4.81e+00 ~ 4.8%]
+            Writes    :       5 [4.81e+00 ~ 4.8%]
+    
+    Notes
+    
+        *Non-overlapping variables and spills may share stack space,
+         so the total stack size might be less than this.
+    
+
+===========================================================================
