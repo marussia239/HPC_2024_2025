@@ -1,0 +1,70 @@
+Global optimization report for : main
+
+LOOP BEGIN at pi_homework.c (61, 9)
+    remark #15300: LOOP WAS VECTORIZED
+    remark #15305: vectorization support: vector length 4
+    remark #15475: --- begin vector loop cost summary ---
+    remark #15476: scalar cost: 23.000000 
+    remark #15477: vector cost: 12.250000 
+    remark #15478: estimated potential speedup: 1.843750 
+    remark #15309: vectorization support: normalized vectorization overhead 0.484375
+    remark #15482: vectorized math library calls: 0 
+    remark #15484: vector function calls: 0 
+    remark #15485: serialized function calls: 0
+    remark #15488: --- end vector loop cost summary ---
+    remark #15447: --- begin vector loop memory reference summary ---
+    remark #15450: unmasked unaligned unit stride loads: 0 
+    remark #15451: unmasked unaligned unit stride stores: 0 
+    remark #15456: masked unaligned unit stride loads: 0 
+    remark #15457: masked unaligned unit stride stores: 0 
+    remark #15458: masked indexed (or gather) loads: 0 
+    remark #15459: masked indexed (or scatter) stores: 0 
+    remark #15462: unmasked indexed (or gather) loads: 0 
+    remark #15463: unmasked indexed (or scatter) stores: 0 
+    remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+    remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+    remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+    remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+    remark #15497: vector compress: 0 
+    remark #15498: vector expand: 0 
+    remark #15474: --- end vector loop memory reference summary ---
+    remark #25587: Loop has reduction
+LOOP END
+
+LOOP BEGIN at pi_homework.c (61, 9)
+<Remainder loop for vectorization>
+LOOP END
+
+LOOP BEGIN at pi_homework.c (31, 9)
+    remark #15521: Loop was not vectorized: loop control variable was not identified. Explicitly compute the iteration count before executing the loop or try using canonical loop form from OpenMP specification
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+COMPILE FUNC: main
+   -> EXTERN: MPI_Init pi_homework.c (18,5)
+   -> EXTERN: MPI_Comm_rank pi_homework.c (19,5)
+   -> EXTERN: MPI_Comm_size pi_homework.c (20,5)
+   -> EXTERN: clock pi_homework.c (22,20)
+   -> EXTERN: MPI_Recv pi_homework.c (32,13)
+   -> DELETE: printf pi_homework.c (34,17)
+   -> EXTERN: printf pi_homework.c (36,13)
+   -> EXTERN: printf pi_homework.c (38,13)
+   -> EXTERN: clock pi_homework.c (44,18)
+   -> EXTERN: printf pi_homework.c (46,9)
+   -> EXTERN: printf pi_homework.c (47,9)
+   -> EXTERN: printf pi_homework.c (48,9)
+   -> EXTERN: printf pi_homework.c (60,9)
+   -> EXTERN: printf pi_homework.c (69,9)
+   -> EXTERN: MPI_Send pi_homework.c (71,9)
+   -> EXTERN: MPI_Finalize pi_homework.c (74,5)
+   -> EXTERN: puts pi_homework.c (34,17)
+   -> llvm.vector.reduce.fadd.v4f64 pi_homework.c (65,23)
+
+---- End Inlining Report ------

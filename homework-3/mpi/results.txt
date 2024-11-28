@@ -1,0 +1,405 @@
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shmMPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shmMPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shmMPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+MPI startup(): I_MPI_WAITMODE is unsupported for shm:ofi fabrics please specify I_MPI_FABRICS=ofi or I_MPI_FABRICS=shm
+I am process 28, i am computing 1250000000 intervals, from 33750000001 to 35000000000
+I am process 1, i am computing 1250000000 intervals, from 1 to 1250000000
+I am process 3, i am computing 1250000000 intervals, from 2500000001 to 3750000000
+I am process 14, i am computing 1250000000 intervals, from 16250000001 to 17500000000
+I am process 74, i am computing 1250000000 intervals, from 91250000001 to 92500000000
+I am process 9, i am computing 1250000000 intervals, from 10000000001 to 11250000000
+I am process 72, i am computing 1250000000 intervals, from 88750000001 to 90000000000
+I am process 75, i am computing 1250000000 intervals, from 92500000001 to 93750000000
+I am process 79, i am computing 1250000000 intervals, from 97500000001 to 98750000000
+I am process 10, i am computing 1250000000 intervals, from 11250000001 to 12500000000
+I am process 24, i am computing 1250000000 intervals, from 28750000001 to 30000000000
+I am process 44, i am computing 1250000000 intervals, from 53750000001 to 55000000000
+I am process 47, i am computing 1250000000 intervals, from 57500000001 to 58750000000
+I am process 22, i am computing 1250000000 intervals, from 26250000001 to 27500000000
+I am process 39, i am computing 1250000000 intervals, from 47500000001 to 48750000000
+I am process 2, i am computing 1250000000 intervals, from 1250000001 to 2500000000
+I am process 37, i am computing 1250000000 intervals, from 45000000001 to 46250000000
+I am process 30, i am computing 1250000000 intervals, from 36250000001 to 37500000000
+I am process 8, i am computing 1250000000 intervals, from 8750000001 to 10000000000
+I am process 63, i am computing 1250000000 intervals, from 77500000001 to 78750000000
+I am process 78, i am computing 1250000000 intervals, from 96250000001 to 97500000000
+I am process 71, i am computing 1250000000 intervals, from 87500000001 to 88750000000
+I am process 18, i am computing 1250000000 intervals, from 21250000001 to 22500000000
+I am process 29, i am computing 1250000000 intervals, from 35000000001 to 36250000000
+I am process 12, i am computing 1250000000 intervals, from 13750000001 to 15000000000
+I am process 45, i am computing 1250000000 intervals, from 55000000001 to 56250000000
+I am process 54, i am computing 1250000000 intervals, from 66250000001 to 67500000000
+I am process 69, i am computing 1250000000 intervals, from 85000000001 to 86250000000
+I am process 59, i am computing 1250000000 intervals, from 72500000001 to 73750000000
+I am process 6, i am computing 1250000000 intervals, from 6250000001 to 7500000000
+I am process 51, i am computing 1250000000 intervals, from 62500000001 to 63750000000
+I am process 34, i am computing 1250000000 intervals, from 41250000001 to 42500000000
+I am process 13, i am computing 1250000000 intervals, from 15000000001 to 16250000000
+I am process 16, i am computing 1250000000 intervals, from 18750000001 to 20000000000
+I am process 52, i am computing 1250000000 intervals, from 63750000001 to 65000000000
+I am process 60, i am computing 1250000000 intervals, from 73750000001 to 75000000000
+I am process 43, i am computing 1250000000 intervals, from 52500000001 to 53750000000
+I am process 26, i am computing 1250000000 intervals, from 31250000001 to 32500000000
+I am process 55, i am computing 1250000000 intervals, from 67500000001 to 68750000000
+I am process 76, i am computing 1250000000 intervals, from 93750000001 to 95000000000
+I am process 53, i am computing 1250000000 intervals, from 65000000001 to 66250000000
+I am process 80, i am computing 1250000000 intervals, from 98750000001 to 100000000000
+I am process 77, i am computing 1250000000 intervals, from 95000000001 to 96250000000
+I am process 58, i am computing 1250000000 intervals, from 71250000001 to 72500000000
+I am process 62, i am computing 1250000000 intervals, from 76250000001 to 77500000000
+I am process 27, i am computing 1250000000 intervals, from 32500000001 to 33750000000
+I am process 7, i am computing 1250000000 intervals, from 7500000001 to 8750000000
+I am process 17, i am computing 1250000000 intervals, from 20000000001 to 21250000000
+I am process 41, i am computing 1250000000 intervals, from 50000000001 to 51250000000
+I am process 38, i am computing 1250000000 intervals, from 46250000001 to 47500000000
+I am process 19, i am computing 1250000000 intervals, from 22500000001 to 23750000000
+I am process 61, i am computing 1250000000 intervals, from 75000000001 to 76250000000
+I am process 48, i am computing 1250000000 intervals, from 58750000001 to 60000000000
+I am process 15, i am computing 1250000000 intervals, from 17500000001 to 18750000000
+I am process 32, i am computing 1250000000 intervals, from 38750000001 to 40000000000
+I am process 36, i am computing 1250000000 intervals, from 43750000001 to 45000000000
+I am process 25, i am computing 1250000000 intervals, from 30000000001 to 31250000000
+I am process 65, i am computing 1250000000 intervals, from 80000000001 to 81250000000
+I am process 57, i am computing 1250000000 intervals, from 70000000001 to 71250000000
+I am process 42, i am computing 1250000000 intervals, from 51250000001 to 52500000000
+I am process 20, i am computing 1250000000 intervals, from 23750000001 to 25000000000
+I am process 21, i am computing 1250000000 intervals, from 25000000001 to 26250000000
+I am process 73, i am computing 1250000000 intervals, from 90000000001 to 91250000000
+I am process 23, i am computing 1250000000 intervals, from 27500000001 to 28750000000
+I am process 31, i am computing 1250000000 intervals, from 37500000001 to 38750000000
+I am process 11, i am computing 1250000000 intervals, from 12500000001 to 13750000000
+I am process 64, i am computing 1250000000 intervals, from 78750000001 to 80000000000
+I am process 33, i am computing 1250000000 intervals, from 40000000001 to 41250000000
+I am process 56, i am computing 1250000000 intervals, from 68750000001 to 70000000000
+I am process 5, i am computing 1250000000 intervals, from 5000000001 to 6250000000
+I am process 66, i am computing 1250000000 intervals, from 81250000001 to 82500000000
+I am process 70, i am computing 1250000000 intervals, from 86250000001 to 87500000000
+I am process 40, i am computing 1250000000 intervals, from 48750000001 to 50000000000
+I am process 68, i am computing 1250000000 intervals, from 83750000001 to 85000000000
+I am process 50, i am computing 1250000000 intervals, from 61250000001 to 62500000000
+I am process 4, i am computing 1250000000 intervals, from 3750000001 to 5000000000
+I am process 67, i am computing 1250000000 intervals, from 82500000001 to 83750000000
+I am process 35, i am computing 1250000000 intervals, from 42500000001 to 43750000000
+I am process 49, i am computing 1250000000 intervals, from 60000000001 to 61250000000
+I am process 46, i am computing 1250000000 intervals, from 56250000001 to 57500000000
+I am process 28, i have computed 4471585660.099668
+I am the master, i have received 4471585660.099668 from 28
+I am the master, the total sum is 4471585660.099668
+I am process 14, i have computed 4861504765.913744
+I am the master, i have received 4861504765.913744 from 14
+I am the master, the total sum is 9333090426.013412
+I am process 10, i have computed 4930412848.308761
+I am the master, i have received 4930412848.308761 from 10
+I am the master, the total sum is 14263503274.322174
+I am process 72, i have computed 2779663385.722597
+I am the master, i have received 2779663385.722597 from 72
+I am the master, the total sum is 17043166660.044771
+I am process 74, i have computed 2711363319.699653
+I am the master, i have received 2711363319.699653 from 74
+I am the master, the total sum is 19754529979.744423
+I am process 75, i have computed 2677784264.714057
+I am the master, i have received 2677784264.714057 from 75
+I am the master, the total sum is 22432314244.458481
+I am process 70, i have computed 2849462039.409993
+I am the master, i have received 2849462039.409993 from 70
+I am the master, the total sum is 25281776283.868473
+I am process 44, i have computed 3859021610.064347
+I am the master, i have received 3859021610.064347 from 44
+I am the master, the total sum is 29140797893.932819
+I am process 1, i have computed 4999739607.744736
+I am process 24, i have computed 4602788781.630478
+I am the master, i have received 4999739607.744736 from 1
+I am the master, the total sum is 34140537501.677555
+I am the master, i have received 4602788781.630478 from 24
+I am the master, the total sum is 38743326283.308029
+I am process 9, i have computed 4944123973.930091
+I am process 3, i have computed 4995057229.096802
+I am the master, i have received 4995057229.096802 from 3
+I am the master, the total sum is 43738383512.404831
+I am the master, i have received 4944123973.930091 from 9
+I am the master, the total sum is 48682507486.334923
+I am process 79, i have computed 2547330632.537807
+I am the master, i have received 2547330632.537807 from 79
+I am the master, the total sum is 51229838118.872726
+I am process 2, i have computed 4998177839.823738
+I am process 71, i have computed 2814377480.230221
+I am the master, i have received 2814377480.230221 from 71
+I am the master, the total sum is 54044215599.102951
+I am process 43, i have computed 3899462134.200393
+I am process 57, i have computed 3336036077.367788
+I am process 15, i have computed 4840913417.331953
+I am process 30, i have computed 4401472965.422515
+I am the master, i have received 3336036077.367788 from 57
+I am the master, the total sum is 57380251676.470741
+I am the master, i have received 4998177839.823738 from 2
+I am the master, the total sum is 62378429516.294479
+I am the master, i have received 4401472965.422515 from 30
+I am the master, the total sum is 66779902481.716995
+I am process 37, i have computed 4138496919.477687
+I am process 77, i have computed 2611781361.294676
+I am the master, i have received 4840913417.331953 from 15
+I am the master, the total sum is 71620815899.048950
+I am process 38, i have computed 4099267195.241291
+I am process 59, i have computed 3257920219.296144
+I am process 63, i have computed 3104925023.622954
+I am process 13, i have computed 4880782771.233444
+I am process 55, i have computed 3415071769.677268
+I am process 69, i have computed 2884912112.352665
+I am process 17, i have computed 4795933241.445822
+I am the master, i have received 3899462134.200393 from 43
+I am the master, the total sum is 75520278033.249344
+I am process 12, i have computed 4898714047.363832
+I am process 45, i have computed 3818499753.150762
+I am the master, i have received 4138496919.477687 from 37
+I am the master, the total sum is 79658774952.727036
+I am the master, i have received 4898714047.363832 from 12
+I am the master, the total sum is 84557489000.090866
+I am the master, i have received 3818499753.150762 from 45
+I am the master, the total sum is 88375988753.241623
+I am the master, i have received 3104925023.622954 from 63
+I am the master, the total sum is 91480913776.864578
+I am the master, i have received 2884912112.352665 from 69
+I am the master, the total sum is 94365825889.217239
+I am process 6, i have computed 4976415085.923562
+I am the master, i have received 2611781361.294676 from 77
+I am the master, the total sum is 96977607250.511917
+I am the master, i have received 4099267195.241291 from 38
+I am the master, the total sum is 101076874445.753204
+I am the master, i have received 4880782771.233444 from 13
+I am the master, the total sum is 105957657216.986649
+I am process 80, i have computed 2515690101.082894
+I am process 51, i have computed 3575323776.475365
+I am process 18, i have computed 4771619757.718352
+I am process 58, i have computed 3296855077.253759
+I am process 16, i have computed 4819043941.674759
+I am process 78, i have computed 2579361313.755511
+I am process 22, i have computed 4663152189.008404
+I am process 26, i have computed 4538812283.746779
+I am process 53, i have computed 3494887037.297428
+I am the master, i have received 4771619757.718352 from 18
+I am the master, the total sum is 110729276974.705002
+I am the master, i have received 4976415085.923562 from 6
+I am the master, the total sum is 115705692060.628571
+I am the master, i have received 2579361313.755511 from 78
+I am the master, the total sum is 118285053374.384079
+I am the master, i have received 4819043941.674759 from 16
+I am the master, the total sum is 123104097316.058838
+I am the master, i have received 3415071769.677268 from 55
+I am the master, the total sum is 126519169085.736099
+I am the master, i have received 3257920219.296144 from 59
+I am the master, the total sum is 129777089305.032242
+I am the master, i have received 4663152189.008404 from 22
+I am the master, the total sum is 134440241494.040649
+I am the master, i have received 3494887037.297428 from 53
+I am the master, the total sum is 137935128531.338074
+I am the master, i have received 3296855077.253759 from 58
+I am the master, the total sum is 141231983608.591827
+I am process 64, i have computed 3067424532.654991
+I am process 23, i have computed 4633444647.153730
+I am process 73, i have computed 2745324085.861316
+I am process 62, i have computed 3142736352.828964
+I am process 7, i have computed 4967146095.478535
+I am process 41, i have computed 3979968157.122047
+I am the master, i have received 3575323776.475365 from 51
+I am the master, the total sum is 144807307385.067200
+I am the master, i have received 4795933241.445822 from 17
+I am the master, the total sum is 149603240626.513031
+I am the master, i have received 2745324085.861316 from 73
+I am the master, the total sum is 152348564712.374359
+I am the master, i have received 4538812283.746779 from 26
+I am the master, the total sum is 156887376996.121124
+I am the master, i have received 4967146095.478535 from 7
+I am the master, the total sum is 161854523091.599670
+I am the master, i have received 3979968157.122047 from 41
+I am the master, the total sum is 165834491248.721710
+I am the master, i have received 4633444647.153730 from 23
+I am the master, the total sum is 170467935895.875427
+I am the master, i have received 2515690101.082894 from 80
+I am the master, the total sum is 172983625996.958313
+I am the master, i have received 3142736352.828964 from 62
+I am the master, the total sum is 176126362349.787292
+I am the master, i have received 3067424532.654991 from 64
+I am the master, the total sum is 179193786882.442291
+I am process 47, i have computed 3737335764.541724
+I am the master, i have received 3737335764.541724 from 47
+I am the master, the total sum is 182931122646.984009
+I am process 50, i have computed 3615720726.873124
+I am the master, i have received 3615720726.873124 from 50
+I am the master, the total sum is 186546843373.857147
+I am process 8, i have computed 4956375816.679821
+I am the master, i have received 4956375816.679821 from 8
+I am the master, the total sum is 191503219190.536957
+I am process 54, i have computed 3454891410.537550
+I am process 29, i have computed 4436867388.115209
+I am the master, i have received 3454891410.537550 from 54
+I am the master, the total sum is 194958110601.074493
+I am process 60, i have computed 3219246387.712580
+I am the master, i have received 3219246387.712580 from 60
+I am the master, the total sum is 198177356988.787079
+I am the master, i have received 4436867388.115209 from 29
+I am the master, the total sum is 202614224376.902283
+I am process 52, i have computed 3535038322.573191
+I am process 39, i have computed 4059743875.213443
+I am the master, i have received 3535038322.573191 from 52
+I am the master, the total sum is 206149262699.475464
+I am the master, i have received 4059743875.213443 from 39
+I am the master, the total sum is 210209006574.688904
+I am process 76, i have computed 2644589565.430531
+I am the master, i have received 2644589565.430531 from 76
+I am the master, the total sum is 212853596140.119446
+I am process 31, i have computed 4365447409.891884
+I am the master, i have received 4365447409.891884 from 31
+I am the master, the total sum is 217219043550.011322
+I am process 49, i have computed 3656205302.318213
+I am the master, i have received 3656205302.318213 from 49
+I am the master, the total sum is 220875248852.329529
+I am process 48, i have computed 3696752417.927836
+I am the master, i have received 3696752417.927836 from 48
+I am the master, the total sum is 224572001270.257355
+I am process 65, i have computed 3030245060.478120
+I am the master, i have received 3030245060.478120 from 65
+I am the master, the total sum is 227602246330.735474
+I am process 21, i have computed 4691866922.608590
+I am process 19, i have computed 4746143319.610373
+I am the master, i have received 4691866922.608590 from 21
+I am the master, the total sum is 232294113253.344055
+I am the master, i have received 4746143319.610373 from 19
+I am the master, the total sum is 237040256572.954437
+I am process 20, i have computed 4719544992.018749
+I am process 34, i have computed 4254027325.312947
+I am process 27, i have computed 4505582460.855615
+I am process 32, i have computed 4328835326.825483
+I am the master, i have received 4719544992.018749 from 20
+I am the master, the total sum is 241759801564.973175
+I am the master, i have received 4328835326.825483 from 32
+I am the master, the total sum is 246088636891.798645
+I am the master, i have received 4254027325.312947 from 34
+I am the master, the total sum is 250342664217.111603
+I am the master, i have received 4505582460.855615 from 27
+I am the master, the total sum is 254848246677.967224
+I am process 36, i have computed 4177393814.221390
+I am the master, i have received 4177393814.221390 from 36
+I am the master, the total sum is 259025640492.188599
+I am process 56, i have computed 3375447301.697783
+I am process 11, i have computed 4915267177.730210
+I am process 61, i have computed 3180847463.000504
+I am process 25, i have computed 4571229558.841707
+I am the master, i have received 4915267177.730210 from 11
+I am the master, the total sum is 263940907669.918823
+I am the master, i have received 4571229558.841707 from 25
+I am the master, the total sum is 268512137228.760529
+I am the master, i have received 3375447301.697783 from 56
+I am the master, the total sum is 271887584530.458313
+I am process 4, i have computed 4990383612.112622
+I am the master, i have received 3180847463.000504 from 61
+I am the master, the total sum is 275068431993.458801
+I am process 66, i have computed 2993395943.543976
+I am process 68, i have computed 2920722096.580982
+I am process 46, i have computed 3777927801.469087
+I am the master, i have received 2993395943.543976 from 66
+I am the master, the total sum is 278061827937.002808
+I am the master, i have received 4990383612.112622 from 4
+I am the master, the total sum is 283052211549.115417
+I am the master, i have received 2920722096.580982 from 68
+I am the master, the total sum is 285972933645.696411
+I am the master, i have received 3777927801.469087 from 46
+I am the master, the total sum is 289750861447.165527
+I am process 42, i have computed 3939788869.435068
+I am process 33, i have computed 4291680805.923712
+I am process 40, i have computed 4019965157.213785
+I am process 5, i have computed 4984165709.605698
+I am process 67, i have computed 2956885706.862999
+I am process 35, i have computed 4215917662.772349
+I am the master, i have received 4019965157.213785 from 40
+I am the master, the total sum is 293770826604.379333
+I am the master, i have received 3939788869.435068 from 42
+I am the master, the total sum is 297710615473.814392
+I am the master, i have received 4215917662.772349 from 35
+I am the master, the total sum is 301926533136.586731
+I am the master, i have received 4291680805.923712 from 33
+I am the master, the total sum is 306218213942.510437
+I am the master, i have received 2956885706.862999 from 67
+I am the master, the total sum is 309175099649.373413
+I am the master, i have received 4984165709.605698 from 5
+I am the master, the total sum is 314159265358.979126
+Computed PI 3.141592653589790895551914
+The true PI 3.141592653589793115997963
+
+Elapsed time (s) = 2.95
