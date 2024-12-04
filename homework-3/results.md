@@ -12,7 +12,7 @@ Execution time (s):
 # Parallel case with MPI
 
 Compile command: `icx -O3 -xHost -qopenmp -qopt-report3 omp_homework_par.c -o h1_par`
-Execute command: ``
+Execute command: `mpirun -np <num-processes> ./hw3`
 
 
 Execution time (s) with 11 processes (10 slaves, 1 master):
