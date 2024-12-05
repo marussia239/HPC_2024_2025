@@ -36,8 +36,11 @@ int main(int argc, char **argv)
     int *image;
     cudaMalloc((void **)&image, HEIGHT * WIDTH * sizeof(int));
 
-    dim3 numBlocks(64, 64);
     dim3 threadsPerBlock(32, 32);
+    dim3 numBlocks(
+        (WIDTH  + threadsPerBlock.x - 1) / threadsPerBlock.x,
+        (HEIGHT + threadsPerBlock.y - 1) / threadsPerBlock.y
+    );
 
     const auto start = chrono::steady_clock::now();
 
