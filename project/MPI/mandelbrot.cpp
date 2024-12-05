@@ -29,7 +29,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
     int *const image = new int[HEIGHT * WIDTH];
-    long int i, pos, intervals;
+    long int i, pos, n_intervals;
     int rank, size;
     MPI_Status status;
     MPI_Request req;
@@ -38,24 +38,33 @@ int main(int argc, char **argv)
     MPI_Comm_rank( MPI_COMM_WORLD, &rank );
     MPI_Comm_size( MPI_COMM_WORLD, &size );
 
+    n_intervals = HEIGHT * WIDTH / (size - 1);
+
     if (rank == 0) {
-        int *temp;
-        long range;
-        intervals = HEIGHT * WIDTH / (size - 1);
+        int *temp = new int[n_intervals];
 
         const auto start = chrono::steady_clock::now();
 
         // Wait for slave processes to have finished.
         for (i = 1; i < size; i++) {
-            MPI_Recv(&range, 1, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
-            MPI_Recv(temp, range, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
-            long start = intervals * (status.MPI_SOURCE-1) + 1;
-            long end = intervals * status.MPI_SOURCE;
+            cout << "I am master and I am waiting..." << endl;
+
+            MPI_Recv(temp, n_intervals, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
+            cout << "I received something..." << endl;
+            int actual_count;
+            MPI_Get_count(&status, MPI_INT, &actual_count);
+            cout << "I accessed something..." << endl;
+
+            if (actual_count != n_intervals) {
+                cout << "Received " << actual_count << " elements instead of " << n_intervals << " from " << status.MPI_SOURCE << endl;
+                continue;
+            }
+            long start = n_intervals * (status.MPI_SOURCE-1) + 1;
+            long end = n_intervals * status.MPI_SOURCE;
             if (status.MPI_ERROR != MPI_SUCCESS) {
                 cout << "An error occurred" << endl;
             }
-            cout << "I am the master, i have received " << temp[0] 
-            << " from "<< status.MPI_SOURCE << endl;
+            cout << "I am the master, i have received from "<< status.MPI_SOURCE << endl;
 
             //*(image+start*sizeof(int)) = *temp;
         }
@@ -103,17 +112,16 @@ int main(int argc, char **argv)
     }
 
     else {
-        intervals = HEIGHT * WIDTH / (size - 1);
+        n_intervals = HEIGHT * WIDTH / (size - 1);
         
-        long start = intervals * (rank-1) + 1;
-        long end = intervals * rank;
-        long range = end-start+1;
-        int *temp = new int[range];
+        long start = n_intervals * (rank-1) + 1;
+        long end = n_intervals * rank;
+        int *temp = new int[n_intervals];
 
-        cout << "I am process " << rank << ", i am computing " << end-start+1 
-        << " intervals, from " << start << " to " << end << endl;
+        cout << "I am process " << rank << ", i am computing " << end-start+1;
+        cout << " intervals, from " << start << " to " << end << endl;
 
-        for (pos = start; pos <= end; pos++) {
+        for (pos = 0; pos < n_intervals; pos++) {
             temp[pos] = 0;
 
             const int row = pos / WIDTH;
@@ -136,13 +144,12 @@ int main(int argc, char **argv)
             }
         }
 
-        cout << "I am process " << rank << ", i have computed" << temp[0] << endl;
+        MPI_Send(temp, n_intervals, MPI_INT, 0, 0, MPI_COMM_WORLD);
 
-        MPI_Send(&(range), 1, MPI_INT, 0, 0, MPI_COMM_WORLD);
-        MPI_Send(temp, end-start+1, MPI_INT, 0, 0, MPI_COMM_WORLD);
         delete[] temp;
     }
 
     delete[] image; // It's here for coding style, but useless
+    MPI_Finalize();
     return 0;
 }
