@@ -15,14 +15,14 @@
 #define RATIO_Y (MAX_Y - MIN_Y)
 
 // Image size
-#define RESOLUTION 1000
+#define RESOLUTION 5000
 #define WIDTH (RATIO_X * RESOLUTION)
 #define HEIGHT (RATIO_Y * RESOLUTION)
 
 #define STEP ((double)RATIO_X / WIDTH)
 
 #define DEGREE 2        // Degree of the polynomial
-#define ITERATIONS 1000 // Maximum number of iterations
+#define ITERATIONS 1500 // Maximum number of iterations
 
 using namespace std;
 
@@ -47,26 +47,19 @@ int main(int argc, char **argv)
 
         // Wait for slave processes to have finished.
         for (i = 1; i < size; i++) {
-            cout << "I am master and I am waiting..." << endl;
 
             MPI_Recv(temp, n_intervals, MPI_INT, MPI_ANY_SOURCE, 0, MPI_COMM_WORLD, &status);
-            cout << "I received something..." << endl;
-            int actual_count;
-            MPI_Get_count(&status, MPI_INT, &actual_count);
-            cout << "I accessed something..." << endl;
 
-            if (actual_count != n_intervals) {
-                cout << "Received " << actual_count << " elements instead of " << n_intervals << " from " << status.MPI_SOURCE << endl;
-                continue;
-            }
             long start = n_intervals * (status.MPI_SOURCE-1) + 1;
             long end = n_intervals * status.MPI_SOURCE;
             if (status.MPI_ERROR != MPI_SUCCESS) {
                 cout << "An error occurred" << endl;
             }
-            cout << "I am the master, i have received from "<< status.MPI_SOURCE << endl;
 
-            //*(image+start*sizeof(int)) = *temp;
+            // Store the data received inside the main image
+            for (long pos = start; pos <= end; pos++) {
+                image[pos] = temp[pos - start];
+            }
         }
 
         const auto end = chrono::steady_clock::now();
@@ -118,14 +111,11 @@ int main(int argc, char **argv)
         long end = n_intervals * rank;
         int *temp = new int[n_intervals];
 
-        cout << "I am process " << rank << ", i am computing " << end-start+1;
-        cout << " intervals, from " << start << " to " << end << endl;
-
         for (pos = 0; pos < n_intervals; pos++) {
             temp[pos] = 0;
 
-            const int row = pos / WIDTH;
-            const int col = pos % WIDTH;
+            const int row = (start + pos) / WIDTH;
+            const int col = (start + pos) % WIDTH;
             const complex<double> c(col * STEP + MIN_X, row * STEP + MIN_Y);
 
             // z = z^2 + c
