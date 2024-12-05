@@ -3,7 +3,7 @@
 all: mandelbrot
 
 mandelbrot: mandelbrot.cpp
-	mpiicpx -O3 -xHost -qopt-report3 mandelbrot.cpp -o mandelbrot
+	mpiicpx -qopenmp -O3 -xHost -qopt-report3 mandelbrot.cpp -o mandelbrot
 
 run:
 	mpirun -np 11 ./mandelbrot out.csv

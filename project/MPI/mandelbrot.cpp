@@ -2,6 +2,7 @@
 #include <fstream>
 #include <complex>
 #include <chrono>
+#include <omp.h>
 #include <mpi.h>
 
 // Ranges of the set
@@ -111,6 +112,7 @@ int main(int argc, char **argv)
         long end = n_intervals * rank;
         int *temp = new int[n_intervals];
 
+        #pragma omp parallel for
         for (pos = 0; pos < n_intervals; pos++) {
             temp[pos] = 0;
 
