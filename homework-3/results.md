@@ -24,11 +24,8 @@ Execution time (s) with 41 processes (10 slaves, 1 master):
 Execution time (s) with 81 processes (10 slaves, 1 master):
 - 2.95 in total.
 
-## Time plotted against number of intervals
 
 | Number of intervals | Sequential | 1 processes | 2 Processes | 4 Processes | 8 Processes | 16 processes | 32 Processes | 64 Processes | 128 Processes | 256 Processes |
 |-------|-------|-----|-------|--------|-------|--------|-------|-------|------|--------|
 | 100.000.000.000 | 58.32 | 60.98 | 30.74 | 15.38 | 13.38 | 14.75 | 6.87 | 3.19 | 1.94 | 0.97 |
 | 1.000.000.000.000 | 584.29 |
-
-Note, number of processes is a count of number of slave processes. They do thus not include the master process.
