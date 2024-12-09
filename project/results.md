@@ -14,3 +14,11 @@ The first loop is the hotspot.
 # Multithread parallelization using OpenMP
 
 Adding `#pragma omp parallel for` before the hotspot loop and running with 20 threads, time is 13.766 second (speedup of about x9.18).
+
+# Multithread parallelization using MPI
+
+After optimising with both MPI and OpenMP:
+Time elapsed for calculation (optimised): 9.468 seconds.
+Time elapsed for printing (unoptimised): 6.075 seconds.
+
+Executed with 5000 resolution and 1500 iterations.
