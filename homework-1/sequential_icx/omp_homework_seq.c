@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
   double dft_finish, idft_finish;
 
   // size of input array
-  int N = 100000;
+  int N = atoi(argv[1]);
   printf("DFTW calculation with N = %d \n", N);
 
   double *xr = (double *)malloc(N * sizeof(double));
