@@ -1,7 +1,7 @@
 --- !Passed
 Pass:            openmp
 Name:            Region
-DebugLoc:        { File: mandelbrot.cpp, Line: 36, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 9 }
 Function:        main
 Args:
   - Construct:       single
@@ -2107,7 +2107,19 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 33, Column: 24 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 32, Column: 5 }
+Function:        main
+Args:
+  - Callee:          omp_set_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: mandelbrot.cpp, Line: 30, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 24 }
 Function:        main
 Args:
   - Callee:          _ZNSt6chrono3_V212steady_clock3nowEv
@@ -2130,7 +2142,7 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 42 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 42 }
 Function:        main
 Args:
   - Callee:          omp_get_num_threads
@@ -2142,7 +2154,7 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 Function:        main
 Args:
   - Callee:          _ZNSolsEi
@@ -2248,7 +2260,19 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 33, Column: 24 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 32, Column: 5 }
+Function:        main
+Args:
+  - Callee:          omp_set_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: mandelbrot.cpp, Line: 30, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 24 }
 Function:        main
 Args:
   - Callee:          _ZNSt6chrono3_V212steady_clock3nowEv
@@ -2271,7 +2295,7 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 42 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 42 }
 Function:        main
 Args:
   - Callee:          omp_get_num_threads
@@ -2283,7 +2307,7 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 Function:        main
 Args:
   - Callee:          _ZNSolsEi
@@ -2377,7 +2401,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 14 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 14 }
 Function:        main
 Args:
   - String:          ''''
@@ -2397,7 +2421,7 @@ Args:
   - String:          ' at callsite '
   - String:          main
   - String:          ':'
-  - Line:            '8'
+  - Line:            '9'
   - String:          ':'
   - Column:          '14'
   - String:          ';'
@@ -2405,7 +2429,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 64 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 64 }
 Function:        main
 Args:
   - String:          ''''
@@ -2425,7 +2449,7 @@ Args:
   - String:          ' at callsite '
   - String:          main
   - String:          ':'
-  - Line:            '8'
+  - Line:            '9'
   - String:          ':'
   - Column:          '64'
   - String:          ';'
@@ -2433,7 +2457,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 46, Column: 35 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 47, Column: 35 }
 Function:        main
 Args:
   - String:          ''''
@@ -2453,7 +2477,7 @@ Args:
   - String:          ' at callsite '
   - String:          main
   - String:          ':'
-  - Line:            '17'
+  - Line:            '18'
   - String:          ':'
   - Column:          '35'
   - String:          ';'
@@ -2461,7 +2485,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 49, Column: 29 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 50, Column: 29 }
 Function:        main
 Args:
   - String:          ''''
@@ -2481,7 +2505,7 @@ Args:
   - String:          ' at callsite '
   - String:          main
   - String:          ':'
-  - Line:            '20'
+  - Line:            '21'
   - String:          ':'
   - Column:          '29'
   - String:          ';'
@@ -2489,7 +2513,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 52, Column: 21 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 53, Column: 21 }
 Function:        main
 Args:
   - String:          ''''
@@ -2509,7 +2533,7 @@ Args:
   - String:          ' at callsite '
   - String:          main
   - String:          ':'
-  - Line:            '23'
+  - Line:            '24'
   - String:          ':'
   - Column:          '21'
   - String:          ';'
@@ -2517,7 +2541,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 52, Column: 31 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 53, Column: 31 }
 Function:        main
 Args:
   - String:          ''''
@@ -2537,7 +2561,7 @@ Args:
   - String:          ' at callsite '
   - String:          main
   - String:          ':'
-  - Line:            '23'
+  - Line:            '24'
   - String:          ':'
   - Column:          '31'
   - String:          ';'
@@ -2545,7 +2569,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 55, Column: 21 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 56, Column: 21 }
 Function:        main
 Args:
   - String:          ''''
@@ -2565,7 +2589,7 @@ Args:
   - String:          ' at callsite '
   - String:          main
   - String:          ':'
-  - Line:            '26'
+  - Line:            '27'
   - String:          ':'
   - Column:          '21'
   - String:          ';'
@@ -3292,7 +3316,7 @@ Args:
   - String:          ' @ '
   - String:          main
   - String:          ':'
-  - Line:            '8'
+  - Line:            '9'
   - String:          ':'
   - Column:          '64'
   - String:          ';'
@@ -3551,7 +3575,7 @@ Args:
 --- !Passed
 Pass:            openmp
 Name:            Region
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main
 Args:
   - Construct:       loop
@@ -3560,7 +3584,7 @@ Args:
 --- !Passed
 Pass:            openmp
 Name:            Region
-DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 5 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 5 }
 Function:        main.extracted
 Args:
   - Construct:       parallel
@@ -4203,7 +4227,7 @@ Args:
   - Callee:          __kmpc_single
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4216,7 +4240,7 @@ Args:
   - Callee:          strlen
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4229,31 +4253,31 @@ Args:
   - Callee:          _ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 42 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 42 }
 Function:        main.extracted
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 Function:        main.extracted
 Args:
   - Callee:          _ZNSolsEi
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4266,7 +4290,7 @@ Args:
   - Callee:          _ZSt16__throw_bad_castv
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4279,7 +4303,7 @@ Args:
   - Callee:          _ZNKSt5ctypeIcE13_M_widen_initEv
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4292,7 +4316,7 @@ Args:
   - Callee:          _ZNSo3putEc
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4305,7 +4329,7 @@ Args:
   - Callee:          _ZNSo5flushEv
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4316,7 +4340,7 @@ Args:
   - Callee:          __kmpc_end_single
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4327,31 +4351,31 @@ Args:
   - Callee:          __kmpc_barrier
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - Callee:          __kmpc_for_static_init_4
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - Callee:          __kmpc_for_static_fini
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4362,7 +4386,7 @@ Args:
   - Callee:          __kmpc_barrier
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4373,7 +4397,7 @@ Args:
   - Callee:          __kmpc_single
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4386,7 +4410,7 @@ Args:
   - Callee:          strlen
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4399,31 +4423,31 @@ Args:
   - Callee:          _ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 42 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 42 }
 Function:        main.extracted
 Args:
   - Callee:          omp_get_num_threads
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 Function:        main.extracted
 Args:
   - Callee:          _ZNSolsEi
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4436,7 +4460,7 @@ Args:
   - Callee:          _ZSt16__throw_bad_castv
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4449,7 +4473,7 @@ Args:
   - Callee:          _ZNKSt5ctypeIcE13_M_widen_initEv
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4462,7 +4486,7 @@ Args:
   - Callee:          _ZNSo3putEc
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4475,7 +4499,7 @@ Args:
   - Callee:          _ZNSo5flushEv
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4486,7 +4510,7 @@ Args:
   - Callee:          __kmpc_end_single
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4497,31 +4521,31 @@ Args:
   - Callee:          __kmpc_barrier
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - Callee:          __kmpc_for_static_init_4
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - Callee:          __kmpc_for_static_fini
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
@@ -4532,7 +4556,7 @@ Args:
   - Callee:          __kmpc_barrier
   - String:          ' will not be inlined into '
   - Caller:          main.extracted
-    DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 0 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
   - String:          ' because its definition is unavailable'
 ...
 --- !Passed
@@ -4556,7 +4580,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4570,7 +4594,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4584,7 +4608,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4598,7 +4622,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4612,7 +4636,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4688,7 +4712,7 @@ Args:
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - String:          'load of type '
@@ -4702,7 +4726,7 @@ Args:
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - String:          'load of type '
@@ -4710,15 +4734,15 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     store
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - String:          'load of type '
@@ -4726,10 +4750,10 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     store
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4741,10 +4765,10 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4758,7 +4782,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4772,7 +4796,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4786,7 +4810,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4800,7 +4824,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4814,7 +4838,7 @@ Args:
   - String:          ' not eliminated'
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 39 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4890,7 +4914,7 @@ Args:
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - String:          'load of type '
@@ -4904,7 +4928,7 @@ Args:
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - String:          'load of type '
@@ -4912,15 +4936,15 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     store
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 ...
 --- !Missed
 Pass:            gvn
 Name:            LoadClobbered
-DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 Function:        main.extracted
 Args:
   - String:          'load of type '
@@ -4928,10 +4952,10 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     store
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 ...
 --- !Missed
 Pass:            gvn
@@ -4943,10 +4967,10 @@ Args:
   - String:          ' not eliminated'
   - String:          ' in favor of '
   - OtherAccess:     load
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
   - String:          ' because it is clobbered by '
   - ClobberedBy:     call
-    DebugLoc:        { File: mandelbrot.cpp, Line: 39, Column: 9 }
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
 ...
 --- !Missed
 Pass:            inline
@@ -4963,7 +4987,19 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 33, Column: 24 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 32, Column: 5 }
+Function:        main
+Args:
+  - Callee:          omp_set_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: mandelbrot.cpp, Line: 30, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 24 }
 Function:        main
 Args:
   - Callee:          _ZNSt6chrono3_V212steady_clock3nowEv
@@ -4975,7 +5011,7 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 5 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 5 }
 Function:        main
 Args:
   - Callee:          __kmpc_fork_call
@@ -5592,7 +5628,19 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 33, Column: 24 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 32, Column: 5 }
+Function:        main
+Args:
+  - Callee:          omp_set_num_threads
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: mandelbrot.cpp, Line: 30, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 24 }
 Function:        main
 Args:
   - Callee:          _ZNSt6chrono3_V212steady_clock3nowEv
@@ -5604,7 +5652,7 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NoDefinition
-DebugLoc:        { File: mandelbrot.cpp, Line: 34, Column: 5 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 5 }
 Function:        main
 Args:
   - Callee:          __kmpc_fork_call
@@ -6644,6 +6692,703 @@ Args:
   - String:          ' because its definition is unavailable'
 ...
 --- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 450, Column: 30 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: mandelbrot.cpp, Line: 78, Column: 21 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 70, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 682, Column: 29 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                       Line: 923, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                   Line: 996, Column: 10 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                       Line: 995, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: mandelbrot.cpp, Line: 90, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 611, Column: 2 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     invoke
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 450, Column: 30 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 704, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 450, Column: 30 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 38, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                       Line: 876, Column: 8 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                       Line: 704, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+Function:        main.extracted
+Args:
+  - String:          'load of type '
+  - Type:            ''
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+...
+--- !Passed
+Pass:            TTI
+Name:            DontUnroll
+DebugLoc:        { File: mandelbrot.cpp, Line: 88, Column: 9 }
+Function:        main
+Args:
+  - String:          'advising against unrolling the loop because it contains a '
+  - Call:            invoke
+    DebugLoc:        { File: mandelbrot.cpp, Line: 90, Column: 24 }
+...
+--- !Passed
+Pass:            TTI
+Name:            DontUnroll
+DebugLoc:        { File: mandelbrot.cpp, Line: 86, Column: 5 }
+Function:        main
+Args:
+  - String:          'advising against unrolling the loop because it contains a '
+  - Call:            invoke
+    DebugLoc:        { File: mandelbrot.cpp, Line: 90, Column: 24 }
+...
+--- !Missed
 Pass:            licm
 Name:            LoadWithLoopInvariantAddressInvalidated
 DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
@@ -6651,4 +7396,1838 @@ DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c
 Function:        main
 Args:
   - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 617, Column: 50 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 617, Column: 50 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1350, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 617, Column: 50 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 617, Column: 50 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1333, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1350, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        main.extracted
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 88, Column: 9 }
+Function:        main
+Args:
+  - NumVRCopies:     '6'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '3.562708e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 86, Column: 5 }
+Function:        main
+Args:
+  - NumVRCopies:     '10'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '3.584577e+03'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 29, Column: 1 }
+Function:        main
+Args:
+  - NumSpills:       '2'
+  - String:          ' spills '
+  - TotalSpillsCost: '4.999986e-01'
+  - String:          ' total spills cost '
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - TotalReloadsCost: '2.485144e-01'
+  - String:          ' total reloads cost '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - TotalFoldedReloadsCost: '2.485141e-01'
+  - String:          ' total folded reloads cost '
+  - NumVRCopies:     '51'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '3.603315e+03'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: mandelbrot.cpp, Line: 30, Column: 0 }
+Function:        main
+Args:
+  - NumStackBytes:   '584'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '52'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 876, Column: 8 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 25 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 611, Column: 2 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 78, Column: 21 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 138, Column: 16 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                   Line: 0, Column: 0 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                   Line: 266, Column: 16 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 90, Column: 27 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 92, Column: 21 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 88, Column: 31 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 90, Column: 45 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 95, Column: 17 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 86, Column: 40 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 90, Column: 37 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 876, Column: 8 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 25 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 704, Column: 19 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 86, Column: 40 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 611, Column: 2 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                   Line: 995, Column: 18 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                   Line: 995, Column: 7 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/fstream', 
+                   Line: 996, Column: 10 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 99, Column: 28 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '7'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/chrono', 
+                   Line: 564, Column: 34 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 611, Column: 2 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 29 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 876, Column: 8 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 25 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 876, Column: 8 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 25 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 876, Column: 8 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 877, Column: 15 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 25 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 704, Column: 19 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 104, Column: 5 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 50, Column: 2 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 50, Column: 2 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 50, Column: 2 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 50, Column: 2 }
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '5'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: mandelbrot.cpp, Line: 30, Column: 0 }
+Function:        main
+Args:
+  - NumInstructions: '278'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: mandelbrot.cpp, Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_mandelbrot.cpp
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        _GLOBAL__sub_I_mandelbrot.cpp
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: mandelbrot.cpp, Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_mandelbrot.cpp
+Args:
+  - NumInstructions: '8'
+  - String:          ' instructions in function'
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 51, Column: 13 }
+Function:        main.extracted
+Args:
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.805640e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '9.605640e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 51, Column: 13 }
+Function:        main.extracted
+Args:
+  - NumVRCopies:     '1'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '8.805640e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - NumVRCopies:     '2'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '9.605640e+01'
+  - String:          ' total copies cost '
+  - String:          generated in loop
+...
+--- !Missed
+Pass:            regalloc
+Name:            SpillReloadCopies
+DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 1 }
+Function:        main.extracted
+Args:
+  - NumVRCopies:     '14'
+  - String:          ' virtual registers copies '
+  - TotalCopiesCost: '1.984878e+02'
+  - String:          ' total copies cost '
+  - String:          generated in function
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
+Function:        main.extracted
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '13'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 37, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '14'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 874, Column: 6 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 875, Column: 11 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '2'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/locale_facets.h', 
+                   Line: 876, Column: 8 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/ostream', 
+                   Line: 682, Column: 25 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '8'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '25'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 40, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '12'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 43, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '10'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 56, Column: 21 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 58, Column: 32 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 41, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 46, Column: 33 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '17'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1350, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 51, Column: 31 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '6'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 56, Column: 21 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 58, Column: 32 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 41, Column: 9 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '3'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 43, Column: 24 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '18'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '11'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/complex', 
+                   Line: 1350, Column: 13 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '9'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: mandelbrot.cpp, Line: 51, Column: 31 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '4'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionMix
+DebugLoc:        { File: '/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/basic_ios.h', 
+                   Line: 50, Column: 2 }
+Function:        main.extracted
+Args:
+  - String:          'BasicBlock: '
+  - BasicBlock:      ''
+  - String:          "\n"
+  - String:          ''
+  - String:          ': '
+  - INST_:           '1'
+  - String:          "\n"
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: mandelbrot.cpp, Line: 35, Column: 0 }
+Function:        main.extracted
+Args:
+  - NumInstructions: '198'
+  - String:          ' instructions in function'
 ...

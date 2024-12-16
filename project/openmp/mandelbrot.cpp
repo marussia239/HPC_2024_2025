@@ -15,7 +15,7 @@
 #define RATIO_Y (MAX_Y - MIN_Y)
 
 // Image size
-#define RESOLUTION 5000
+#define RESOLUTION 10000
 #define WIDTH (RATIO_X * RESOLUTION)
 #define HEIGHT (RATIO_Y * RESOLUTION)
 
@@ -29,6 +29,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
     int *const image = new int[HEIGHT * WIDTH];
+    omp_set_num_threads(10);
 
     const auto start = chrono::steady_clock::now();
     #pragma omp parallel
