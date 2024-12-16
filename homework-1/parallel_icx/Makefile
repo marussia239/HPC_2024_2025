@@ -9,3 +9,6 @@ clean:
 	rm h1_par
 	rm omp_homework_par.optrpt
 	rm omp_homework_par.opt.yaml
+
+png:
+	gnuplot plot_script.gp
