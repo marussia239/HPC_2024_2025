@@ -6,16 +6,16 @@ source /opt/intel/oneapi/setvars.sh
 
 - [ ] Hotspot identification
   - [ ] HW1
-  - [ ] HW3
   - [ ] HW2
-  - [ ] Project
+  - [ ] HW3
+  - [x] Project
 - [ ] Measure execution time
-  - [ ] HW1
-  - [ ] HW3
+  - [x] HW1
   - [ ] HW2
+  - [x] HW3
   - [ ] Project
 - [ ] Generate plots; execution time and speedup
   - [ ] HW1
-  - [ ] HW3
   - [ ] HW2
+  - [ ] HW3
   - [ ] Project
