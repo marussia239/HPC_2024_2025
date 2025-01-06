@@ -96,19 +96,6 @@ int main() {
         return -1;
     }
 
-    err = cudaMemcpy(d_temp1, temp1, size, cudaMemcpyHostToDevice);
-    
-    if (err != cudaSuccess) {
-        printf("CUDA memcpy failed! Error: %s\n", cudaGetErrorString(err));
-        return -1;
-    }
-    err = cudaMemcpy(d_temp2, temp2, size, cudaMemcpyHostToDevice);
-
-    if (err != cudaSuccess) {
-        printf("CUDA memcpy failed! Error: %s\n", cudaGetErrorString(err));
-        return -1;
-    }
-
     dim3 threadsPerBlock(threads_per_block, threads_per_block);
     dim3 numBlocks((ni + threadsPerBlock.x - 1) / threadsPerBlock.x,
                    (nj + threadsPerBlock.y - 1) / threadsPerBlock.y);
@@ -129,6 +116,20 @@ int main() {
 
     // Execute the modified version using same data
     auto start_gpu = std::chrono::high_resolution_clock::now();
+
+    err = cudaMemcpy(d_temp1, temp1, size, cudaMemcpyHostToDevice);
+    
+    if (err != cudaSuccess) {
+        printf("CUDA memcpy failed! Error: %s\n", cudaGetErrorString(err));
+        return -1;
+    }
+    err = cudaMemcpy(d_temp2, temp2, size, cudaMemcpyHostToDevice);
+
+    if (err != cudaSuccess) {
+        printf("CUDA memcpy failed! Error: %s\n", cudaGetErrorString(err));
+        return -1;
+    }
+
     for (istep = 0; istep < nstep; istep++) {
         step_kernel_mod<<<numBlocks, threadsPerBlock>>>(ni, nj, tfac, d_temp1, d_temp2);
         cudaDeviceSynchronize();
@@ -137,11 +138,15 @@ int main() {
         d_temp1 = d_temp2;
         d_temp2 = temp_tmp;
     }
+
+    cudaMemcpy(temp1, d_temp1, size, cudaMemcpyDeviceToHost);
+    cudaMemcpy(temp2, d_temp2, size, cudaMemcpyDeviceToHost);
+
     auto end_gpu = std::chrono::high_resolution_clock::now();
     double gpu_time = std::chrono::duration<double>(end_gpu - start_gpu).count();
     printf("GPU Execution Time: %.6f seconds\n", gpu_time);
 
-    cudaMemcpy(temp1, d_temp1, size, cudaMemcpyDeviceToHost);
+    
 
       float maxError = 0;
     // Output should always be stored in the temp1 and temp1_ref at this point
@@ -162,7 +167,7 @@ int main() {
     printf("Max Error: %.6f\n", maxError);
 
     FILE *results_file = fopen("results.csv", "a");
-    fprintf(results_file, "%d,%d,%d,%d,%.6f,%.6f,%.2f\n", ni, nj, nstep, threads_per_block, cpu_time, gpu_time, cpu_time / gpu_time);
+    fprintf(results_file, "%d,%d,%d,%d,%d,%.6f,%.6f,%.2f\n", ni, nj, nstep, threads_per_block, numBlocks.x, cpu_time, gpu_time, cpu_time / gpu_time);
     fclose(results_file);
 
     free( temp1_ref );
