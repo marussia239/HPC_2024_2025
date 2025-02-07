@@ -29,7 +29,7 @@ using namespace std;
 int main(int argc, char **argv)
 {
     int *const image = new int[HEIGHT * WIDTH];
-    omp_set_num_threads(10);
+    omp_set_num_threads(20);
 
     const auto start = chrono::steady_clock::now();
     #pragma omp parallel

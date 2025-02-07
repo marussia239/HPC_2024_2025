@@ -9,4 +9,8 @@ run:
 	./mandelbrot out.csv
 
 clean: 
-	rm mandelbrot
+	rm mandelbrot &
+	rm mandelbrot.opt.ld.yaml &
+	rm mandelbrot.opt.yaml &
+	rm mandelbrot.optrpt &
+	rm ipo_out.optrpt &

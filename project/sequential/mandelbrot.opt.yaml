@@ -2745,7 +2745,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 58, Column: 25 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 58, Column: 20 }
 Function:        main
 Args:
   - String:          ''''
@@ -2767,7 +2767,7 @@ Args:
   - String:          ':'
   - Line:            '30'
   - String:          ':'
-  - Column:          '25'
+  - Column:          '20'
   - String:          ';'
 ...
 --- !Missed
@@ -3343,7 +3343,7 @@ Args:
 --- !Passed
 Pass:            inline
 Name:            Inlined
-DebugLoc:        { File: mandelbrot.cpp, Line: 93, Column: 25 }
+DebugLoc:        { File: mandelbrot.cpp, Line: 93, Column: 20 }
 Function:        main
 Args:
   - String:          ''''
@@ -3363,7 +3363,7 @@ Args:
   - String:          ':'
   - Line:            '65'
   - String:          ':'
-  - Column:          '25'
+  - Column:          '20'
   - String:          ';'
 ...
 --- !Missed
@@ -3438,7 +3438,7 @@ Args:
   - String:          ':'
   - Line:            '30'
   - String:          ':'
-  - Column:          '25'
+  - Column:          '20'
   - String:          ';'
 ...
 --- !Passed
@@ -3578,7 +3578,7 @@ Args:
   - String:          ':'
   - Line:            '65'
   - String:          ':'
-  - Column:          '25'
+  - Column:          '20'
   - String:          ';'
 ...
 --- !Passed

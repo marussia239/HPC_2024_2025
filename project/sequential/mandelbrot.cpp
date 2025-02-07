@@ -21,7 +21,7 @@
 #define STEP ((double)RATIO_X / WIDTH)
 
 #define DEGREE 2        // Degree of the polynomial
-#define ITERATIONS 1500 // Maximum number of iterations
+#define ITERATIONS 750 // Maximum number of iterations
 
 using namespace std;
 
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     const auto end = chrono::steady_clock::now();
     cout << "Time elapsed: "
          << chrono::duration_cast<chrono::milliseconds>(end - start).count()
-         << " seconds." << endl;
+         << " ms." << endl;
 
     // Write the result to a file
     ofstream matrix_out;
@@ -88,9 +88,9 @@ int main(int argc, char **argv)
     }
     matrix_out.close();
     const auto print_end = chrono::steady_clock::now();
-    cout << "Time elapsed: "
+    cout << "Time elapsed to write to file: "
          << chrono::duration_cast<chrono::milliseconds>(print_end - print_start).count()
-         << " seconds." << endl;
+         << " ms." << endl;
 
     delete[] image; // It's here for coding style, but useless
     return 0;
