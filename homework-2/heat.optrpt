@@ -1,0 +1,814 @@
+Global optimization report for : _Z15step_kernel_modiifPfS_
+
+LOOP BEGIN at heat.c (20, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+
+    LOOP BEGIN at heat.c (21, 5)
+        remark #15319: Loop was not vectorized: novector directive used
+    LOOP END
+LOOP END
+
+LOOP BEGIN at heat.c (20, 3)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25540: Loop unrolled and jammed by 8
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at heat.c (21, 5)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 8
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 132.000000 
+        remark #15477: vector cost: 22.281250 
+        remark #15478: estimated potential speedup: 5.765625 
+        remark #15309: vectorization support: normalized vectorization overhead 0.125000
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 40 
+        remark #15451: unmasked unaligned unit stride stores: 8 
+        remark #15456: masked unaligned unit stride loads: 0 
+        remark #15457: masked unaligned unit stride stores: 0 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+        remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
+    LOOP END
+
+    LOOP BEGIN
+    <Remainder loop for vectorization>
+        remark #15440: remainder loop was vectorized (masked)
+        remark #15305: vectorization support: vector length 8
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 0 
+        remark #15451: unmasked unaligned unit stride stores: 0 
+        remark #15456: masked unaligned unit stride loads: 40 
+        remark #15457: masked unaligned unit stride stores: 8 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+LOOP END
+
+LOOP BEGIN at heat.c (20, 3)
+<Remainder loop>
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at heat.c (21, 5)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 16
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 20.000000 
+        remark #15477: vector cost: 4.312500 
+        remark #15478: estimated potential speedup: 4.359375 
+        remark #15309: vectorization support: normalized vectorization overhead 1.156250
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 5 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15456: masked unaligned unit stride loads: 0 
+        remark #15457: masked unaligned unit stride stores: 0 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at heat.c (21, 5)
+    <Remainder loop for vectorization>
+        remark #15439: remainder loop was vectorized (unmasked)
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 5 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15456: masked unaligned unit stride loads: 0 
+        remark #15457: masked unaligned unit stride stores: 0 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at heat.c (21, 5)
+    <Remainder loop for vectorization>
+        remark #25583: Number of Array Refs Scalar Replaced In Loop: 2
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : _Z15step_kernel_refiifPfS_
+
+LOOP BEGIN at heat.c (47, 3)
+<Multiversioned v2>
+    remark #15319: Loop was not vectorized: novector directive used
+
+    LOOP BEGIN at heat.c (48, 5)
+        remark #15319: Loop was not vectorized: novector directive used
+    LOOP END
+LOOP END
+
+LOOP BEGIN at heat.c (47, 3)
+<Multiversioned v1>
+    remark #25228: Loop multiversioned for Data Dependence
+    remark #25540: Loop unrolled and jammed by 8
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at heat.c (48, 5)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 8
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 132.000000 
+        remark #15477: vector cost: 22.281250 
+        remark #15478: estimated potential speedup: 5.765625 
+        remark #15309: vectorization support: normalized vectorization overhead 0.125000
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 40 
+        remark #15451: unmasked unaligned unit stride stores: 8 
+        remark #15456: masked unaligned unit stride loads: 0 
+        remark #15457: masked unaligned unit stride stores: 0 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+        remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
+    LOOP END
+
+    LOOP BEGIN
+    <Remainder loop for vectorization>
+        remark #15440: remainder loop was vectorized (masked)
+        remark #15305: vectorization support: vector length 8
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 0 
+        remark #15451: unmasked unaligned unit stride stores: 0 
+        remark #15456: masked unaligned unit stride loads: 40 
+        remark #15457: masked unaligned unit stride stores: 8 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+LOOP END
+
+LOOP BEGIN at heat.c (47, 3)
+<Remainder loop>
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at heat.c (48, 5)
+        remark #15300: LOOP WAS VECTORIZED
+        remark #15305: vectorization support: vector length 16
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15476: scalar cost: 20.000000 
+        remark #15477: vector cost: 4.312500 
+        remark #15478: estimated potential speedup: 4.359375 
+        remark #15309: vectorization support: normalized vectorization overhead 1.156250
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 5 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15456: masked unaligned unit stride loads: 0 
+        remark #15457: masked unaligned unit stride stores: 0 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at heat.c (48, 5)
+    <Remainder loop for vectorization>
+        remark #15439: remainder loop was vectorized (unmasked)
+        remark #15305: vectorization support: vector length 4
+        remark #15475: --- begin vector loop cost summary ---
+        remark #15482: vectorized math library calls: 0 
+        remark #15484: vector function calls: 0 
+        remark #15485: serialized function calls: 0
+        remark #15488: --- end vector loop cost summary ---
+        remark #15447: --- begin vector loop memory reference summary ---
+        remark #15450: unmasked unaligned unit stride loads: 5 
+        remark #15451: unmasked unaligned unit stride stores: 1 
+        remark #15456: masked unaligned unit stride loads: 0 
+        remark #15457: masked unaligned unit stride stores: 0 
+        remark #15458: masked indexed (or gather) loads: 0 
+        remark #15459: masked indexed (or scatter) stores: 0 
+        remark #15462: unmasked indexed (or gather) loads: 0 
+        remark #15463: unmasked indexed (or scatter) stores: 0 
+        remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+        remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+        remark #15497: vector compress: 0 
+        remark #15498: vector expand: 0 
+        remark #15474: --- end vector loop memory reference summary ---
+    LOOP END
+
+    LOOP BEGIN at heat.c (48, 5)
+    <Remainder loop for vectorization>
+        remark #25583: Number of Array Refs Scalar Replaced In Loop: 2
+    LOOP END
+LOOP END
+=================================================================
+
+Global optimization report for : main
+
+LOOP BEGIN at heat.c (87, 3)
+    remark #15527: Loop was not vectorized: function call to  cannot be vectorized
+    remark #25438: Loop unrolled without remainder by 4
+LOOP END
+
+LOOP BEGIN at heat.c (92, 3)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at heat.c (47, 3)
+        remark #25540: Loop unrolled and jammed by 8
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at heat.c (48, 5)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15476: scalar cost: 132.000000 
+            remark #15477: vector cost: 22.281250 
+            remark #15478: estimated potential speedup: 5.859375 
+            remark #15309: vectorization support: normalized vectorization overhead 0.000000
+            remark #15570: using scalar loop trip count: 998
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 40 
+            remark #15451: unmasked unaligned unit stride stores: 8 
+            remark #15456: masked unaligned unit stride loads: 0 
+            remark #15457: masked unaligned unit stride stores: 0 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+            remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
+        LOOP END
+
+        LOOP BEGIN
+        <Remainder loop for vectorization>
+            remark #15440: remainder loop was vectorized (masked)
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 0 
+            remark #15451: unmasked unaligned unit stride stores: 0 
+            remark #15456: masked unaligned unit stride loads: 40 
+            remark #15457: masked unaligned unit stride stores: 8 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at heat.c (47, 3)
+    <Remainder loop>
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at heat.c (48, 5)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15476: scalar cost: 20.000000 
+            remark #15477: vector cost: 4.312500 
+            remark #15478: estimated potential speedup: 4.562500 
+            remark #15309: vectorization support: normalized vectorization overhead 0.000000
+            remark #15570: using scalar loop trip count: 998
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 5 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15456: masked unaligned unit stride loads: 0 
+            remark #15457: masked unaligned unit stride stores: 0 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+        LOOP END
+
+        LOOP BEGIN
+        <Remainder loop for vectorization>
+            remark #15440: remainder loop was vectorized (masked)
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 0 
+            remark #15451: unmasked unaligned unit stride stores: 0 
+            remark #15456: masked unaligned unit stride loads: 5 
+            remark #15457: masked unaligned unit stride stores: 1 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at heat.c (102, 3)
+    remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+    LOOP BEGIN at heat.c (20, 3)
+        remark #25540: Loop unrolled and jammed by 8
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at heat.c (21, 5)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15476: scalar cost: 132.000000 
+            remark #15477: vector cost: 22.281250 
+            remark #15478: estimated potential speedup: 5.859375 
+            remark #15309: vectorization support: normalized vectorization overhead 0.000000
+            remark #15570: using scalar loop trip count: 998
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 40 
+            remark #15451: unmasked unaligned unit stride stores: 8 
+            remark #15456: masked unaligned unit stride loads: 0 
+            remark #15457: masked unaligned unit stride stores: 0 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+            remark #25583: Number of Array Refs Scalar Replaced In Loop: 14
+        LOOP END
+
+        LOOP BEGIN
+        <Remainder loop for vectorization>
+            remark #15440: remainder loop was vectorized (masked)
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 0 
+            remark #15451: unmasked unaligned unit stride stores: 0 
+            remark #15456: masked unaligned unit stride loads: 40 
+            remark #15457: masked unaligned unit stride stores: 8 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+        LOOP END
+    LOOP END
+
+    LOOP BEGIN at heat.c (20, 3)
+    <Remainder loop>
+        remark #15553: loop was not vectorized: outer loop is not an auto-vectorization candidate.
+
+        LOOP BEGIN at heat.c (21, 5)
+            remark #15300: LOOP WAS VECTORIZED
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15476: scalar cost: 20.000000 
+            remark #15477: vector cost: 4.312500 
+            remark #15478: estimated potential speedup: 4.562500 
+            remark #15309: vectorization support: normalized vectorization overhead 0.000000
+            remark #15570: using scalar loop trip count: 998
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 5 
+            remark #15451: unmasked unaligned unit stride stores: 1 
+            remark #15456: masked unaligned unit stride loads: 0 
+            remark #15457: masked unaligned unit stride stores: 0 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+        LOOP END
+
+        LOOP BEGIN
+        <Remainder loop for vectorization>
+            remark #15440: remainder loop was vectorized (masked)
+            remark #15305: vectorization support: vector length 8
+            remark #15475: --- begin vector loop cost summary ---
+            remark #15482: vectorized math library calls: 0 
+            remark #15484: vector function calls: 0 
+            remark #15485: serialized function calls: 0
+            remark #15488: --- end vector loop cost summary ---
+            remark #15447: --- begin vector loop memory reference summary ---
+            remark #15450: unmasked unaligned unit stride loads: 0 
+            remark #15451: unmasked unaligned unit stride stores: 0 
+            remark #15456: masked unaligned unit stride loads: 5 
+            remark #15457: masked unaligned unit stride stores: 1 
+            remark #15458: masked indexed (or gather) loads: 0 
+            remark #15459: masked indexed (or scatter) stores: 0 
+            remark #15462: unmasked indexed (or gather) loads: 0 
+            remark #15463: unmasked indexed (or scatter) stores: 0 
+            remark #15554: Unmasked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15555: Masked VLS-optimized loads (each part of the group counted separately): 0
+            remark #15556: Unmasked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15557: Masked VLS-optimized stores (each part of the group counted separately): 0
+            remark #15497: vector compress: 0 
+            remark #15498: vector expand: 0 
+            remark #15474: --- end vector loop memory reference summary ---
+        LOOP END
+    LOOP END
+LOOP END
+
+LOOP BEGIN at heat.c (113, 3)
+    remark #15344: Loop was not vectorized: vector dependence prevents vectorization
+    remark #15346: vector dependence: assumed FLOW dependence between (114:9) and (114:9) 
+    remark #15346: vector dependence: assumed FLOW dependence between (114:9) and (114:9) 
+    remark #25438: Loop unrolled without remainder by 8
+LOOP END
+=================================================================
+
+---- Begin Inlining Report ----
+Option Values:
+  inline-threshold: 225
+  inlinehint-threshold: 325
+  inlinecold-threshold: 45
+  inlineoptsize-threshold: 15
+
+DEAD STATIC FUNC: _ZSt3absf
+
+COMPILE FUNC: _Z15step_kernel_modiifPfS_
+   -> llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+
+COMPILE FUNC: main
+   -> EXTERN: malloc heat.c (81,23)
+   -> EXTERN: malloc heat.c (82,23)
+   -> EXTERN: malloc heat.c (83,19)
+   -> EXTERN: malloc heat.c (84,19)
+   -> DELETE: rand heat.c (88,64)
+   -> INLINE: _Z15step_kernel_refiifPfS_ heat.c (93,5) (90<=250)
+   -> INLINE: _Z15step_kernel_modiifPfS_ heat.c (103,5) (90<=250)
+   -> INLINE: _ZSt3absf heat.c (114,9) (-30<=1012)
+      -> DELETE: llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+      -> llvm.fabs.f32 heat.c (76,12)
+   -> INLINE: _ZSt3absf heat.c (114,61) (-15030<=487)
+      -> DELETE: llvm.fabs.f32 heat.c (76,12)
+   -> DELETE: printf heat.c (119,5)
+   -> EXTERN: printf heat.c (121,5)
+   -> EXTERN: free heat.c (123,3)
+   -> EXTERN: free heat.c (124,3)
+   -> EXTERN: free heat.c (125,3)
+   -> EXTERN: free heat.c (126,3)
+   -> EXTERN: rand heat.c (88,64)
+   -> EXTERN: rand heat.c (88,64)
+   -> EXTERN: rand heat.c (88,64)
+   -> EXTERN: rand heat.c (88,64)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (31,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (32,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (35,21)
+
+COMPILE FUNC: _Z15step_kernel_refiifPfS_
+   -> llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (58,32)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,45)
+   -> llvm.masked.load.v8f32.p0 heat.c (58,16)
+   -> DELETE: llvm.masked.load.v8f32.p0 heat.c (59,16)
+   -> llvm.masked.load.v8f32.p0 heat.c (59,45)
+   -> llvm.masked.store.v8f32.p0 heat.c (62,21)
+
+---- End Inlining Report ------
