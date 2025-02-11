@@ -5013,9 +5013,9 @@ Name:            LoopSpillReloadCopies
 DebugLoc:        { File: mandelbrot.cpp, Line: 33, Column: 5 }
 Function:        main
 Args:
-  - NumVRCopies:     '3'
+  - NumVRCopies:     '2'
   - String:          ' virtual registers copies '
-  - TotalCopiesCost: '4.162257e+02'
+  - TotalCopiesCost: '3.842257e+02'
   - String:          ' total copies cost '
   - String:          generated in loop
 ...
@@ -5033,9 +5033,9 @@ Args:
   - String:          ' folded reloads '
   - TotalFoldedReloadsCost: '2.485141e-01'
   - String:          ' total folded reloads cost '
-  - NumVRCopies:     '52'
+  - NumVRCopies:     '51'
   - String:          ' virtual registers copies '
-  - TotalCopiesCost: '2.492917e+03'
+  - TotalCopiesCost: '2.460917e+03'
   - String:          ' total copies cost '
   - String:          generated in function
 ...
@@ -5114,7 +5114,7 @@ Args:
   - String:          "\n"
   - String:          ''
   - String:          ': '
-  - INST_:           '14'
+  - INST_:           '13'
   - String:          "\n"
 ...
 --- !Analysis
@@ -6184,7 +6184,7 @@ Name:            InstructionCount
 DebugLoc:        { File: mandelbrot.cpp, Line: 29, Column: 0 }
 Function:        main
 Args:
-  - NumInstructions: '316'
+  - NumInstructions: '315'
   - String:          ' instructions in function'
 ...
 --- !Analysis
