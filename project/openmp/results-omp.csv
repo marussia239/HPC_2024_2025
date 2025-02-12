@@ -1,4 +1,4 @@
-Threads,Resolution, Iterations, Width,  Height, Total size, Execution time [ms],    Writing to file [ms],Total time [ms],Execution time [%],Writing to file [%],Speedup,Efficiency,Total speedup,Total efficiency
+Threads,Resolution,Iterations,Width,Height,Total size,Execution time [ms],Writing to file [ms],Total time [ms],Execution time [%],Writing to file [%],Speedup,Efficiency,Total speedup,Total efficiency
 sequential,6000,500,18000,12000,216000000,61797,6546,68343,0.90422,0.09578,,,,
 1,6000,500,18000,12000,216000000,58039,6644,64683,0.89728,0.10272,1.06475,1.06475,1.05658,1.05658
 2,6000,500,18000,12000,216000000,29106,6632,35738,0.81443,0.18557,2.12317,1.06159,1.91233,0.95617

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <cuda/std/complex>
-#include <chrono>
 
 #include <cuda_runtime.h>
 #include "device_launch_parameters.h"
@@ -27,7 +26,7 @@
 #define ITERATIONS 1000 // Maximum number of iterations
 
 
-__global__ void mandelbrot(double *image) {
+__global__ void mandelbrot(int *image) {
     int col = blockIdx.x * blockDim.x + threadIdx.x;
     int row = blockIdx.y * blockDim.y + threadIdx.y;
     int pos = row * WIDTH + col;
@@ -35,8 +34,6 @@ __global__ void mandelbrot(double *image) {
 
     image[pos] = 0;
 
-    const int row = pos / WIDTH;
-    const int col = pos % WIDTH;
     const cuda::std::complex<double> c(col * STEP + MIN_X, row * STEP + MIN_Y);
 
     // z = z^2 + c
@@ -68,6 +65,15 @@ int main(int argc, char **argv) {
 
     // Call CUDA kernel
     mandelbrot<<<numBlocks, numThreads>>>(image_d);
+    cudaDeviceSynchronize();
+
+    cudaError status = cudaGetLastError();
+    if (status != cudaSuccess) {
+        std::cout << "Error after kernel execution: " << cudaGetErrorString(status) << " (code " << status << ")" << std::endl;
+        delete[] image;
+        cudaFree(image_d);
+        return -3;
+    }
 
     // Transfer results to host
     cudaMemcpy(image, image_d, WIDTH * HEIGHT * sizeof(int), cudaMemcpyDeviceToHost);
