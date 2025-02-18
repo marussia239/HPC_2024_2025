@@ -4,18 +4,18 @@ source /opt/intel/oneapi/setvars.sh
 
 # Checklist
 
-- [ ] Hotspot identification
-  - [ ] HW1
-  - [ ] HW2
-  - [ ] HW3
-  - [x] Project
-- [ ] Measure execution time
+- [x] Hotspot identification
   - [x] HW1
-  - [ ] HW2
+  - [x] HW2
   - [x] HW3
-  - [ ] Project
-- [ ] Generate plots; execution time and speedup
-  - [ ] HW1
-  - [ ] HW2
-  - [ ] HW3
-  - [ ] Project
+  - [x] Project
+- [x] Measure execution time
+  - [x] HW1
+  - [x] HW2
+  - [x] HW3
+  - [x] Project
+- [x] Generate plots; execution time and speedup
+  - [x] HW1
+  - [x] HW2
+  - [x] HW3
+  - [x] Project
